@@ -3,6 +3,8 @@ import Logo from "../media/logo/sa_pri_black_rgb.svg";
 import ExpoVisual from "../media/expo_visual.jpg";
 import mq from "../components/defaults/mediaquery";
 import { css } from "@emotion/react";
+import Button from "../components/typeform";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -16,9 +18,9 @@ export default function Home() {
         min-height: ${typeof window === "undefined"
           ? "100vh"
           : window.innerHeight + "px"};
-        padding: 4em 1em;
+        padding: 4em 1em 1em;
         ${mq[1]} {
-          padding: 7em 3em;
+          padding: 7em 3em 3em;
         }
       `}
     >
@@ -67,7 +69,10 @@ export default function Home() {
         </div>
         <Information />
       </div>
-      <Ticket />
+      <div>
+        <Ticket />
+        <Footer />
+      </div>
     </div>
   );
 }
@@ -90,9 +95,9 @@ const Title = () => {
       <p
         css={css`
           font-size: 3.75em;
-          font-size: clamp(1.5rem, 4vw, 3.75em);
+          font-size: clamp(2rem, 4vw, 3.75em);
           margin: 0;
-          margin-top: -0.25em;
+          margin-top: -0.1em;
           line-height: 1em;
           letter-spacing: 0.015em;
         `}
@@ -116,7 +121,7 @@ const Information = () => {
         }
       `}
     >
-      <p>Stuttgart–GER</p>
+      <p>Stuttgart, Germany</p>
       <p>June 22, 2023</p>
     </div>
   );
@@ -142,21 +147,91 @@ const Ticket = () => {
       >
         What are you waiting for?
       </p>
-      <button
+      <Button
         css={css`
             background: none;
             font-family: PPNeueMachina-InktrapRegular;
             border: none;
             font-size: 3.75em;
-            font-size: clamp(1.5rem,4vw,3.75em);
+            font-size: clamp(2rem,4vw,3.75em);
             text-decoration: underline;
             margin-left: -0.165em;
             text-align: left;
+            cursor: pointer;
           }
       `}
-      >
-        Claim your spot here.
-      </button>
+      />
     </div>
+  );
+};
+
+const Footer = () => {
+  return (
+    <footer
+      css={[
+        css`
+          display: flex;
+          flex-direction: column;
+          margin-top: 1.5em;
+          ${mq[2]} {
+            align-items: flex-end;
+            flex-direction: row-reverse;
+          }
+          & > * {
+            flex: 0 0 50%;
+          }
+        `,
+      ]}
+    >
+      <div>
+        <p
+          css={css`
+            font-size: 0.75em;
+            opacity: 0.5;
+            text-align: left;
+            margin: 1em 0 0;
+            a {
+              color: black;
+            }
+            ${mq[2]} {
+              text-align: right;
+            }
+          `}
+        >
+          If you or your employer are already part of STARTUP AUTOBAHN powered
+          by Plug and Play you might be already eligible to register via the
+          partner tickets. Please refer to the STARTUP AUTOBAHN contact person
+          within your company in order to access your personal ticket. For
+          additional questions please reach out to{" "}
+          <a href="mailto:bastian@pnptc.com">bastian@pnptc.com</a>.
+        </p>
+      </div>
+      <div
+        css={[
+          css`
+            display: flex;
+            font-size: 0.75em;
+            margin-top: 1em;
+            a {
+              text-decoration: none;
+              color: black;
+            }
+          `,
+        ]}
+      >
+        <Link href="/imprint">Imprint</Link>
+        <p
+          css={[
+            css`
+              margin: 0 1em;
+            `,
+          ]}
+        >
+          {" "}
+          |{" "}
+        </p>
+        <Link href="/privacy-policy">Privacy Policy</Link>
+      </div>
+    </footer>
   );
 };
