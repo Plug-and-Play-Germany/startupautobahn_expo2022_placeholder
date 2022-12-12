@@ -1,11 +1,11 @@
-[[redirects]]
-  from = "/"
-  to = "/almost-there"
-  force = true
-
-
 # [[redirects]]
-#   from = "https://www.expo2023.pnptc.events/*"
-#   to = "https://expo2023.pnptc.events/:splat"
-#   status = 301
+#   from = "/"
+#   to = "/almost-there"
 #   force = true
+
+
+[[redirects]]
+  from = "https://www.expo2023.pnptc.events/*"
+  to = "https://expo2023.pnptc.events/:splat"
+  status = 301
+  force = true
