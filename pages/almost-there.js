@@ -33,6 +33,7 @@ const AlmostThere = () => {
           css`
             margin: 0;
             font-size: clamp(4.15rem, 5vw, 10.75em);
+            font-weight: 400;
             font-family: ${PPNeueMachina.style.fontFamily};
           `,
         ]}
