@@ -7,8 +7,7 @@ import Button from "../components/typeform";
 import Link from "next/link";
 import { PPNeueMachina } from "../fonts/fonts";
 
-export default function Home({ className }) {
-  console.log(className);
+export default function Home() {
   return (
     <div
       css={css`
@@ -67,7 +66,7 @@ export default function Home({ className }) {
           >
             <Logo />
           </div>
-          <Title className={className} />
+          <Title />
         </div>
         <Information />
       </div>
@@ -79,10 +78,10 @@ export default function Home({ className }) {
   );
 }
 
-const Title = ({ className }) => {
+const Title = () => {
   return (
-    <div className={className}>
-      <p
+    <div>
+      <h1
         css={css`
           font-family: ${PPNeueMachina.style.fontFamily};
           font-size: 8.25em;
@@ -93,7 +92,7 @@ const Title = ({ className }) => {
         `}
       >
         EXPO2023
-      </p>
+      </h1>
       <p
         css={css`
           font-size: 3.75em;

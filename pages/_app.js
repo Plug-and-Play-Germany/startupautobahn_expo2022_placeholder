@@ -1,6 +1,5 @@
 import "sanitize.css";
 import "sanitize.css/typography.css";
-import localFont from "@next/font/local";
 import { Global, css } from "@emotion/react";
 import { Inter } from "../fonts/fonts";
 import { PPNeueMachina } from "../fonts/fonts";

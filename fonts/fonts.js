@@ -14,6 +14,7 @@ export const PPNeueMachina = localFont({
     "Helvetica Neue",
     "sans-serif",
   ],
+  preload: true,
 });
 
 export const Inter = localFont({
@@ -39,4 +40,5 @@ export const Inter = localFont({
     "Helvetica Neue",
     "sans-serif",
   ],
+  preload: true,
 });
