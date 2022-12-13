@@ -10,13 +10,13 @@
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
-    "@next/font": "^13.0.6",
+    "@next/font": "^13.0.4",
     "@svgr/webpack": "^6.5.1",
     "@typeform/embed-react": "^2.7.0",
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.4",
     "netlify-cli": "^12.2.10",
-    "next": "^13.0.6",
+    "next": "^13.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sanitize.css": "^13.0.0"
