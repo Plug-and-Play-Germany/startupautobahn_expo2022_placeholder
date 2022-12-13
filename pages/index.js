@@ -44,7 +44,7 @@ export default function Home({ className }) {
           alt="EXPO2023"
           fill
           style={{ objectFit: "contain" }}
-          placeholder="blur"
+          placeholder="empty"
         />
       </div>
       <div>
@@ -102,7 +102,6 @@ const Title = ({ className }) => {
           margin: 0;
           margin-top: -0.1em;
           line-height: 1em;
-          letter-spacing: 0.015em;
         `}
       >
         piloting the future
@@ -119,8 +118,8 @@ const Information = () => {
         p {
           font-size: 2.125em;
           margin: 0;
-          letter-spacing: 0.025em;
           font-size: clamp(1.15rem, 4vw, 1.75em);
+          letter-spacing: 0.01em;
         }
       `}
     >
