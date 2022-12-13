@@ -5,7 +5,6 @@ import mq from "../components/defaults/mediaquery";
 import { css } from "@emotion/react";
 import Button from "../components/typeform";
 import Link from "next/link";
-import { Inter } from "../fonts/fonts";
 import { PPNeueMachina } from "../fonts/fonts";
 
 export default function Home({ className }) {

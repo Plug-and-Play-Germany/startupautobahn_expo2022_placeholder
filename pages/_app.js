@@ -3,6 +3,7 @@ import "sanitize.css/typography.css";
 import localFont from "@next/font/local";
 import { Global, css } from "@emotion/react";
 import { Inter } from "../fonts/fonts";
+import { PPNeueMachina } from "../fonts/fonts";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -10,7 +11,6 @@ function MyApp({ Component, pageProps }) {
       <Global
         styles={css`
           p,
-          h1,
           h2,
           h3,
           h4,
@@ -20,6 +20,9 @@ function MyApp({ Component, pageProps }) {
           li,
           button {
             font-family: ${Inter.style.fontFamily};
+          }
+          h1 {
+            font-family: ${PPNeueMachina.style.fontFamily};
           }
           body {
             -webkit-font-smoothing: antialiased;
