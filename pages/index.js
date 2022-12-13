@@ -5,8 +5,11 @@ import mq from "../components/defaults/mediaquery";
 import { css } from "@emotion/react";
 import Button from "../components/typeform";
 import Link from "next/link";
+import { Inter } from "../fonts/fonts";
+import { PPNeueMachina } from "../fonts/fonts";
 
-export default function Home() {
+export default function Home({ className }) {
+  console.log(className);
   return (
     <div
       css={css`
@@ -65,7 +68,7 @@ export default function Home() {
           >
             <Logo />
           </div>
-          <Title />
+          <Title className={className} />
         </div>
         <Information />
       </div>
@@ -77,12 +80,12 @@ export default function Home() {
   );
 }
 
-const Title = () => {
+const Title = ({ className }) => {
   return (
-    <div>
+    <div className={className}>
       <p
         css={css`
-          font-family: PPNeueMachina-InktrapRegular;
+          font-family: ${PPNeueMachina.style.fontFamily};
           font-size: 8.25em;
           font-size: clamp(2.5rem, 13vw, 8.25em);
           margin: 0;
@@ -150,7 +153,7 @@ const Ticket = () => {
       <Button
         css={css`
             background: none;
-            font-family: PPNeueMachina-InktrapRegular;
+            font-family: ${PPNeueMachina.style.fontFamily};
             border: none;
             font-size: 3.75em;
             font-size: clamp(2rem,4vw,3.75em);

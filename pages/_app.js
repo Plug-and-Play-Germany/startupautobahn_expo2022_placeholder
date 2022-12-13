@@ -2,23 +2,7 @@ import "sanitize.css";
 import "sanitize.css/typography.css";
 import localFont from "@next/font/local";
 import { Global, css } from "@emotion/react";
-
-const PPNeueMachina = localFont({
-  src: "../fonts/PPNeueMachina-InktrapRegular.woff2",
-});
-
-const Inter = localFont({
-  src: [
-    {
-      path: "../fonts/Inter.var.woff2",
-      style: "normal",
-    },
-    {
-      path: "../fonts/Inter-italic.var.woff2",
-      style: "italic",
-    },
-  ],
-});
+import { Inter } from "../fonts/fonts";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -33,18 +17,16 @@ function MyApp({ Component, pageProps }) {
           a,
           ul,
           ol,
-          li {
-            font-family: Inter;
+          li,
+          button {
+            font-family: ${Inter.style.fontFamily};
           }
           body {
             -webkit-font-smoothing: antialiased;
           }
         `}
       />
-      <Component
-        {...pageProps}
-        className={(PPNeueMachina.className, Inter.className)}
-      />
+      <Component {...pageProps} />
     </>
   );
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { css } from "@emotion/react";
+import { PPNeueMachina } from "../fonts/fonts";
 
 const AlmostThere = () => {
   return (
@@ -32,7 +33,7 @@ const AlmostThere = () => {
           css`
             margin: 0;
             font-size: clamp(4.15rem, 5vw, 10.75em);
-            font-family: PPNeueMachina-InktrapRegular;
+            font-family: ${PPNeueMachina.style.fontFamily};
           `,
         ]}
       >

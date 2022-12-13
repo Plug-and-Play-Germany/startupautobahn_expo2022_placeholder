@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 import mq from "../defaults/mediaquery";
 import ExpoVisual from "../../media/expo_visual.jpg";
 import Image from "next/image";
+import { PPNeueMachina } from "../../fonts/fonts";
 
 const Plain = ({ title, children }) => {
   return (
@@ -16,7 +17,7 @@ const Plain = ({ title, children }) => {
           ? "100vh"
           : window.innerHeight + "px"};
         h1 {
-          font-family: PPNeueMachina-InktrapRegular;
+          font-family: ${PPNeueMachina.style.fontFamily};
           font-size: clamp(2.5rem, 13vw, 8.25em);
           font-weight: 400;
           margin: 0 0 0.25em;
@@ -31,7 +32,6 @@ const Plain = ({ title, children }) => {
           }
         }
         p {
-          font-family: Inter;
           margin-top: 0;
           margin-bottom: 0.5em;
           font-size: 0.85em;
