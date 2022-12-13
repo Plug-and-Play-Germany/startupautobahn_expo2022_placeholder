@@ -87,6 +87,7 @@ const Title = () => {
           font-size: 8.25em;
           font-size: clamp(2.5rem, 13vw, 8.25em);
           margin: 0;
+          font-weight: 400;
           line-height: 1em;
           margin-left: -0.065em;
         `}
