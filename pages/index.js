@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Logo from "../media/logo/sa_pri_black_rgb.svg";
+import Location from "../media/location.svg";
 import ExpoVisual from "../media/expo_visual.jpg";
 import mq from "../components/defaults/mediaquery";
 import { css } from "@emotion/react";
@@ -43,6 +44,7 @@ export default function Home() {
           fill
           style={{ objectFit: "contain" }}
           placeholder="empty"
+          priority
         />
       </div>
       <div>
@@ -122,7 +124,31 @@ const Information = () => {
         }
       `}
     >
-      <p>Stuttgart, Germany</p>
+      <div
+        css={[
+          css`
+            display: flex;
+            align-items: center;
+          `,
+        ]}
+      >
+        <div
+          css={[
+            css`
+              height: clamp(1.15rem, 4vw, 1.75em);
+              width: auto;
+              margin-right: 0.75em;
+              svg {
+                height: 100%;
+                vertical-align: baseline;
+              }
+            `,
+          ]}
+        >
+          <Location />
+        </div>
+        <p>Stuttgart, Germany</p>
+      </div>
       <p>June 22, 2023</p>
     </div>
   );

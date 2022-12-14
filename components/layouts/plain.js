@@ -68,6 +68,7 @@ const Plain = ({ title, children }) => {
           fill
           placeholder="blur"
           style={{ objectFit: "cover", objectPosition: "bottom" }}
+          priority
           css={[
             css`
               z-index: -1;
