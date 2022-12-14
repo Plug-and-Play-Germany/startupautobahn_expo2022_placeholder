@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
       title: "EXPO2023 | STARTUP AUTOBAHN powered by Plug and Play",
       description:
         "EXPO2023 is an invite-only conference showcasing technologies of the future and exposing the power of open innovation between leading corporations and innovative startups. STARTUP AUTOBAHN powered by Plug and Play welcomes over 1,000 entrepreneurs, investors, experts and decision makers in the field of Mobility, Production, Enterprise, Sustainability and beyond to Stuttgart to exchange opinions and experiences on relevant future topics and to experience what can result from successful open collaboration.",
-      image: "https://expo2023.pnptc.events/thumbnail.jpg",
+      image: "https://expo2023.pnptc.events/expo_thumbnail.png",
       url: "https://expo2023.pnptc.events",
       twitter_handle: "@startupautobahn",
     },
