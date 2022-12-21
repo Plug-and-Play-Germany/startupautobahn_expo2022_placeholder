@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Logo from "../media/logo/sa_pri_black_rgb.svg";
 import Location from "../media/location.svg";
+import Date from "../media/date.svg";
 import ExpoVisual from "../media/expo_visual.jpg";
 import mq from "../components/defaults/mediaquery";
 import { css } from "@emotion/react";
@@ -135,9 +136,12 @@ const Information = () => {
         <div
           css={[
             css`
-              height: clamp(1.15rem, 4vw, 1.75em);
-              width: auto;
+              height: clamp(1.15rem, 4vw, 1.65em);
+              width: 1.5em;
               margin-right: 0.75em;
+              ${mq[1]} {
+                width: 2em;
+              }
               svg {
                 height: 100%;
                 vertical-align: baseline;
@@ -149,7 +153,34 @@ const Information = () => {
         </div>
         <p>Stuttgart, Germany</p>
       </div>
-      <p>June 22, 2023</p>
+      <div
+        css={[
+          css`
+            display: flex;
+            align-items: center;
+          `,
+        ]}
+      >
+        <div
+          css={[
+            css`
+              height: clamp(1.15rem, 4vw, 1.65em);
+              width: 1.5em;
+              margin-right: 0.75em;
+              ${mq[1]} {
+                width: 2em;
+              }
+              svg {
+                height: 100%;
+                vertical-align: baseline;
+              }
+            `,
+          ]}
+        >
+          <Date />
+        </div>
+        <p>June 22, 2023</p>
+      </div>
     </div>
   );
 };
