@@ -12,6 +12,7 @@ const Seo = ({
       <meta name="description" content={description} key="description" />
       <meta name="image" src={image} key="image" />
       <link rel="cononical" href={url} key="url" />
+      <link rel="shortcut icon" href="/favicon.ico" />
 
       {/* OpenGraph tags */}
       <meta property="og:url" content={url} key="og_url" />

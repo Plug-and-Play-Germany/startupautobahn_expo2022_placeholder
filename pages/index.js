@@ -145,6 +145,7 @@ const Information = () => {
               svg {
                 height: 100%;
                 vertical-align: baseline;
+                margin-left: 4px;
               }
             `,
           ]}

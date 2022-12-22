@@ -4,7 +4,6 @@ import { Global, css } from "@emotion/react";
 import { Inter } from "../fonts/fonts";
 import { PPNeueMachina } from "../fonts/fonts";
 import Seo from "../components/seo";
-import Thumbnail from "../media/expo_visual.jpg";
 
 function MyApp({ Component, pageProps }) {
   let seo = {
