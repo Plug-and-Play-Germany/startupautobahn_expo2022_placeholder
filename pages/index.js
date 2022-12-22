@@ -113,76 +113,60 @@ const Title = () => {
 };
 
 const Information = () => {
+  const info_list = [
+    {
+      content: "Stuttgart, Germany",
+      icon: <Location />,
+    },
+    {
+      content: "June 22, 2023",
+      icon: <Date />,
+    },
+  ];
   return (
-    <div
-      css={css`
-        margin-top: 3em;
-        p {
-          font-size: 2.125em;
-          margin: 0;
-          font-size: clamp(1.15rem, 4vw, 1.75em);
-          letter-spacing: 0.01em;
-        }
-      `}
+    <table
+      css={[
+        css`
+          margin-top: 3em;
+        `,
+      ]}
     >
-      <div
-        css={[
-          css`
-            display: flex;
-            align-items: center;
-          `,
-        ]}
-      >
-        <div
-          css={[
-            css`
-              height: clamp(1.15rem, 4vw, 1.65em);
-              width: 1.5em;
-              margin-right: 0.75em;
-              ${mq[1]} {
-                width: 2em;
-              }
-              svg {
-                height: 100%;
-                vertical-align: baseline;
-                margin-left: 4px;
-              }
-            `,
-          ]}
-        >
-          <Location />
-        </div>
-        <p>Stuttgart, Germany</p>
-      </div>
-      <div
-        css={[
-          css`
-            display: flex;
-            align-items: center;
-          `,
-        ]}
-      >
-        <div
-          css={[
-            css`
-              height: clamp(1.15rem, 4vw, 1.65em);
-              width: 1.5em;
-              margin-right: 0.75em;
-              ${mq[1]} {
-                width: 2em;
-              }
-              svg {
-                height: 100%;
-                vertical-align: baseline;
-              }
-            `,
-          ]}
-        >
-          <Date />
-        </div>
-        <p>June 22, 2023</p>
-      </div>
-    </div>
+      {info_list.map((item, i) => (
+        <tr key={i}>
+          <td>
+            <div
+              css={[
+                css`
+                  height: clamp(1.15rem, 4vw, 1.65em);
+                  margin-right: 0.75em;
+                  text-align: center;
+                  svg {
+                    height: 100%;
+                    vertical-align: baseline;
+                  }
+                `,
+              ]}
+            >
+              {item.icon}
+            </div>
+          </td>
+          <td>
+            <p
+              css={[
+                css`
+                  font-size: 2.125em;
+                  margin: 0;
+                  font-size: clamp(1.15rem, 4vw, 1.75em);
+                  letter-spacing: 0.01em;
+                `,
+              ]}
+            >
+              {item.content}
+            </p>
+          </td>
+        </tr>
+      ))}
+    </table>
   );
 };
 
