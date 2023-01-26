@@ -7,7 +7,6 @@ const button = ({ className }) => {
   const typeformOptions = {
     size: 100,
     hideFooter: true,
-    enableSandbox: true,
     onSubmit: (event) => {
       setTimeout(() => close(), 1500);
       if (event && event.responseId && event.responseId !== "") {
