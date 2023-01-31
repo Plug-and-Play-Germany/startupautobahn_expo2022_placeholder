@@ -106,7 +106,7 @@ const Title = () => {
           line-height: 1em;
         `}
       >
-        piloting the future
+        Piloting the Future
       </p>
     </div>
   );
