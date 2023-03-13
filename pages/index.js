@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Logo from "../media/logo/sa_pri_black_rgb.svg";
 import Location from "../media/location.svg";
@@ -10,6 +11,12 @@ import Link from "next/link";
 import { PPNeueMachina } from "../fonts/fonts";
 
 export default function Home() {
+  let [height, setHeight] = useState("100vh");
+
+  useEffect(() => {
+    setHeight(window.innerHeight + "px");
+  }, []);
+
   return (
     <div
       css={css`
@@ -18,9 +25,7 @@ export default function Home() {
         justify-content: space-between;
         position: relative;
         overflow: hidden;
-        min-height: ${typeof window === "undefined"
-          ? "100vh"
-          : window.innerHeight + "px"};
+        min-height: ${height};
         padding: 4em 1em 1em;
         ${mq[1]} {
           padding: 7em 3em 3em;
@@ -192,18 +197,50 @@ const Ticket = () => {
       </p>
       <Button
         css={css`
-            background: none;
-            font-family: ${PPNeueMachina.style.fontFamily};
-            border: none;
-            font-size: 3.75em;
-            font-size: clamp(2rem,4vw,3.75em);
-            text-decoration: underline;
-            margin-left: -0.165em;
-            text-align: left;
-            cursor: pointer;
-          }
-      `}
+          background: none;
+          font-family: ${PPNeueMachina.style.fontFamily};
+          border: none;
+          font-size: 3.75em;
+          font-size: clamp(2rem, 4vw, 3.75em);
+          text-decoration: underline;
+          margin-left: -0.165em;
+          text-align: left;
+          cursor: pointer;
+        `}
       />
+      <p
+        css={[
+          css`
+            margin-top: 15px;
+          `,
+        ]}
+      >
+        <a
+          href="https://pnptc.notion.site/EXPO2023-all-you-need-to-know-d152426b22994e01ac1112bd4d29e88b"
+          target="_blank"
+          rel="noreferrer"
+          css={[
+            css`
+              width: 350px;
+              display: inline-block;
+              text-decoration: none;
+              color: inherit;
+            `,
+          ]}
+        >
+          Already registered and looking for more event specific information?{" "}
+          <span
+            css={[
+              css`
+                text-decoration: underline;
+              `,
+            ]}
+          >
+            Follow this link
+          </span>
+          .
+        </a>
+      </p>
     </div>
   );
 };

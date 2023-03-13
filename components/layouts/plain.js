@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { css } from "@emotion/react";
 import mq from "../defaults/mediaquery";
 import ExpoVisual from "../../media/expo_visual.jpg";
@@ -6,6 +6,12 @@ import Image from "next/image";
 import { PPNeueMachina } from "../../fonts/fonts";
 
 const Plain = ({ title, children }) => {
+  let [height, setHeight] = useState("100vh");
+
+  useEffect(() => {
+    setHeight(window.innerHeight + "px");
+  }, []);
+
   return (
     <section
       css={css`
@@ -13,9 +19,7 @@ const Plain = ({ title, children }) => {
         flex-direction: column;
         position: relative;
         overflow: hidden;
-        min-height: ${typeof window === "undefined"
-          ? "100vh"
-          : window.innerHeight + "px"};
+        min-height: ${height};
         h1 {
           font-family: ${PPNeueMachina.style.fontFamily};
           font-size: clamp(2.5rem, 13vw, 8.25em);

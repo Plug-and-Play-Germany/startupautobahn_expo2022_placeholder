@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { css } from "@emotion/react";
 import { PPNeueMachina } from "../fonts/fonts";
 
 const AlmostThere = () => {
+  let [height, setHeight] = useState("100vh");
+
+  useEffect(() => {
+    setHeight(window.innerHeight + "px");
+  }, []);
+
   return (
     <section
       css={[
@@ -12,9 +18,7 @@ const AlmostThere = () => {
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          min-height: ${typeof window === "undefined"
-            ? "100vh"
-            : window.innerHeight + "px"};
+          min-height: ${height};
         `,
       ]}
     >
